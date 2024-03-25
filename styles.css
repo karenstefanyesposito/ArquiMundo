@@ -1,0 +1,563 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*PARA QUE 1 REM SEA IGUAL AS 10PX*/
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 2.8rem;
+    margin: 0;
+}
+h5{
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2
+
+/*Utilidades*/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+    
+}
+
+p{
+    font-family: var(--fuenteParrafos);
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+.header{
+    background-image: url(img/pexels-pixabay-208241.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*    que parte de la imagen se seguira viendo al cambiar de dispositivo | center center para centrar vertical y horizontalmente*/
+}
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width:768px){
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight:normal ;
+}
+
+.logo__bold{
+    font-weight: 700;
+
+}
+
+.logo{
+    text-align: center;
+}
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+}
+
+@media (min-width:768px){
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+    } 
+}
+
+@media (min-width:768px){
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block; /*para que los elementos no esten uno junto al otro sino uno debajo de otro*/
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--blanco);
+}
+
+.navegacion__enlace:hover{
+    color: var(--primario);
+}
+
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto ;
+}
+
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;        
+    }
+}
+
+
+@media (min-width: 768px){
+    .contenedor-principal {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+                      
+    }
+    
+}
+
+
+
+    
+
+@media(min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1rem;
+        grid-auto-flow: column;
+    }
+}
+
+/*pizarron*/
+.pizarron-noticias{
+    grid-column: 2 / 3;
+}
+
+
+/*epoca*/
+
+@media (min-width:768px){
+    
+    .epoca__apartado,
+    .autores__apartado,
+    .obras__apartado{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1.5rem;
+        margin: 0;   
+        height: 20rem;
+    }article{
+        display: grid;
+        margin: 6rem;
+        padding: 3rem;
+    }.autores__titulo__mostar  h2,
+    .obras__titulo__mostrar  h2,
+    .epoca__titulo__mostrar h2{
+        color: var(--negro);
+        font-size: 2rem;
+        margin: 1rem;
+        font-weight: normal;
+    }
+
+}
+
+
+@media (max-width:480px){
+    .epoca__apartado,
+    .autores__apartado,
+    .obras__apartado{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        row-gap: .5rem;
+    }.autores__titulo__mostar  h5,
+    .obras__titulo__mostrar  h5,
+    .epoca__titulo__mostrar h5{
+        color: var(--negro);
+        font-size: 2rem;
+        margin: 1rem;
+        font-weight: normal;
+    }
+}
+
+
+.epoca__titulo a,
+.autores__titulo a,
+.obras__titulo a{
+    color: var(--negro);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    
+}
+.epoca__titulo  a h2,
+.autores__titulo a h2,
+.obras__titulo a h2{
+    margin-bottom: 0;
+}
+
+
+
+.epoca__apartado__antigua{
+    background-image: url(./img/pexels-kendincefotograf-9675156.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+    
+}
+
+.epoca__apartado__romanica{
+    background-image: url(img/pexels-roman-odintsov-7691303.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.epoca__apartado__gotica{
+    background-image: url(img/pexels-miguel-arcanjo-saddi-18957041.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.autores__apartado__antigua{
+    background-image: url(img/4514.jpg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    
+
+}
+
+.autores__apartado__romanica{
+    
+    background-image: url(img/Duomo_di_fidenza\,_sculture_a_sx_del_portale_c.le\,_re_davide\,_attr._benedetto_antelami_02.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+}
+
+.autores__apartado__gotica{
+
+    background-image: url(img/estatua-de-arnolfo-di-cambio-que-fue-un-arquitecto-y-escultor-italiano-florence-italy-june-como-es-más-conocido-por-el-diseño-188467981.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+
+}
+
+
+
+.obras__apartado__antigua{
+    background-image: url(img/pexels-wendy-wei-14375296.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+
+}
+
+.obras__apartado__romanica{
+    
+    background-image: url(img/pexels-efrem-efre-16976918.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.obras__apartado__gotica{
+
+    background-image: url(img/pexels-pixabay-208241.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+}
+
+.epoca__titulo a:hover,
+.obras__titulo a:hover,
+.autores__titulo a:hover{
+    color: var(--cafe);
+}
+
+/*pizarron noticia*/
+@media (min-width:768px){
+    .pizarron-noticias h3{
+        font-size: 1.5rem;
+    }.pizarron-noticias h4{
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+}
+
+
+/*FORMULARIO*/
+
+            .formulario{
+                background-color: var(--cafe);
+                width: min(60rem, 100%); /*utilizar el valor mas pequeño, ahorra mediaquery*/
+                margin: 0 auto;
+                padding: 2rem;
+                border-radius: 1rem;
+            }
+
+            .comentario{
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .formulario fieldset{
+                border: none;
+            }
+
+            .formulario legend{
+                text-align: center;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                color: var(--primario);
+                font-weight: bold;
+            }
+
+                @media (min-width: 768px){
+                    .contenedor-campos{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: auto auto 20rem;
+                        column-gap: 1rem;
+                    } 
+
+                    .campo:nth-child(3),
+                    .campo:nth-child(4){
+                        grid-column:1/3; 
+                    }
+
+                }
+
+            .campo{
+                margin-bottom: 1rem;
+                
+            }
+
+            .campo label{
+                color: var(--blanco);
+                font-weight: bold;
+                margin-bottom: .5rem;
+                display: block;
+            }
+
+            .campo textarea{
+                height: 20rem;
+            } 
+
+            .input-text{
+                width: 100%;
+                border: none;
+                padding: 1.5rem;
+                border-radius: .5rem;
+                color: var(--negro);
+            }
+
+            .enviar .boton{
+                width: 100%;
+                background-color: var(--primario);
+                color: var(--blanco);
+                padding: 2rem 1rem;
+                font-size: 1.2rem;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: .5rem;
+                text-align: center;
+                margin-top: 1rem;
+                border:none;
+            }
+
+/*iNICIAR SESION*/
+/* Estilos para el modal de inicio de sesión y registro */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+    z-index: 1;
+}
+
+@media (min-width:768px){
+  .modal-content {
+    position: absolute;
+    transform: translate(65%);
+    width: 100%;
+    max-width: 60rem;
+    background-color: #fff;
+    margin: 4rem; /* Añade un margen al contenido del modal */
+    padding:3rem;
+    border-radius: 5px;
+    max-height: 80vh; /* Ajusta la altura maxima*/
+    overflow-y: auto;
+  }
+    
+}
+  
+  @media (max-width: 480px){
+     .modal-content {
+        position: absolute;
+        width:auto;
+        background-color: #fff;
+        margin: 4rem; 
+        padding:3rem;
+        border-radius: 5px;
+        max-height: 80vh; 
+        overflow-y: auto;
+}
+  }  
+  /* estilos boton */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  button {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: var(--cafe);
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--primario);
+  }
+  
+
+ 
+
+
+/*FOOTER*/
+
+.footer{
+    text-align: center;
+}

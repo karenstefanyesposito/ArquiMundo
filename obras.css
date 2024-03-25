@@ -1,0 +1,600 @@
+
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*PARA QUE 1 REM SEA IGUAL AS 10PX*/
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Utilidades*/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+    
+}
+
+p{
+    font-family: var(--fuenteParrafos);
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+.header{
+    background-image: url(img/pexels-cottonbro-studio-9943046.jpg);
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*    que parte de la imagen se seguira viendo al cambiar de dispositivo | center center para centrar vertical y horizontalmente*/
+}
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 1rem;
+}
+@media (max-width:480px){
+    .navegacion{
+        display: flex;
+        justify-content:center;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+        margin: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media (min-width:768px){
+    .header__texto{
+        margin-top: 1rem;
+    }
+}
+
+img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.logo{
+    color: var(--blanco);
+    
+}
+
+.logo__nombre{
+    font-weight:normal ;
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.logo__bold{
+    font-weight: 700;
+    font-size: 3rem;
+
+}
+
+.logo{
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .header__texto{
+        text-align: center;
+        color: var(--blanco);
+        margin:1rem;
+        font-size: 4rem;
+    }
+}
+
+
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+        margin: 1rem;
+        
+    } 
+}
+
+@media (min-width:768px){
+    .navegacion{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block; /*para que los elementos no esten uno junto al otro sino uno debajo de otro*/
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--blanco);
+}
+
+.navegacion__enlace:hover{
+    color: var(--primario);
+}
+
+.obra-epoca a:hover{
+    color: var(--negro);
+}
+    
+
+@media(min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1rem;
+        grid-auto-flow: column;
+    }
+}
+
+
+/*anteriores*/
+
+
+
+main{
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+
+    background-color:#ffffff;
+    background-image: url(img/pexels-anthony-macajone-1874636.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: grid;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 4rem;
+    margin: 1rem;
+
+}
+.subtitulos{
+    
+    padding: .5rem;
+    margin: 0;
+
+}
+
+main h3,
+main h4{
+    color: #ffffff;
+    display: flex;
+    align-items: first baseline;
+    margin: 1rem;
+}
+    
+
+
+.obras{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(12,1fr); 
+    column-gap: 1rem;
+    row-gap: 1rem;
+     
+}
+
+
+
+.obra-epoca {
+    
+    height: 15rem;
+    padding: .5rem;
+    margin: .5rem;
+      
+}
+
+
+
+.obra-epoca a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    display: grid;
+    justify-items: center; /* Esto centra horizontalmente */
+    align-items: center;
+    align-content: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+
+.piramides,
+.templo,
+.obelisco,
+.partenon,
+.templo_griego,
+.epidauro,
+.basilica,
+.iglesia,
+.bautisterio,
+.catedral,
+.palacio,
+.iglesia-cefalu,
+.villa-barbaro,
+.teatro-olimpico,
+.villa-capra,
+.burgos,
+.salisbury,
+.catedral-notre,
+.palacio-italiano,
+.basilica-italiana,
+.iglesia-italiana,
+.scala,
+.capitolio,
+.museo-louvre,
+.teatro-colon,
+.palacio-bruselas,
+.teatro-rio,
+.casa-farnsworth,
+.villa-savoye,
+.casa-cascada,
+.pabellon-barcelona,
+.concert-hall,
+.centro-pompidou
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    padding: 2rem;
+    position: relative;
+    color: #ffffff;
+}
+
+.piramides{
+    background-image: url(https://images.pexels.com/photos/12631014/pexels-photo-12631014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.templo{
+    background-image: url(https://images.pexels.com/photos/18934711/pexels-photo-18934711/free-photo-of-arte-punto-de-referencia-edificio-viaje.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.obelisco{
+    background-image: url(https://historia.nationalgeographic.com.es/medio/2023/11/16/obelisco2_00000000_231116120950_550x820.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.partenon{
+    background-image: url(https://images.pexels.com/photos/772688/pexels-photo-772688.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    
+}
+
+.templo_griego{
+    background-image: url(https://historia.nationalgeographic.com.es/medio/2023/02/08/bal_b57c0c60_957668_230208104626_1280x752.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.epidauro{
+    background-image: url(https://www.discovergreece.com/sites/default/files/styles/og_image/public/2021-01/ancient_epidaurus_the_original_deluxe_healing_centre_shutterstock_1010575777_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.basilica{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/c1/Atrium_of_the_Basilica_of_Sant%27Ambrogio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    
+}
+
+.iglesia{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Facciata_della_Chiesa_di_San_Michele.jpg/1200px-Facciata_della_Chiesa_di_San_Michele.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bautisterio{
+    background-image: url(https://4.bp.blogspot.com/-WgsZT432olY/Vo1DVKwumfI/AAAAAAAAoQU/HCCCbmzk4EQ/s1600/Cividale%252C_museo_cristiano%252C_battistero_di_callisto_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.catedral{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/ef/Monreale_Cathedral_exterior_BW_2012-10-09_10-23-10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    
+}
+
+.palacio{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Zisa_%28Palermo%29_msu2017-0466.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.iglesia-cefalu{
+    background-image: url(https://live.staticflickr.com/65535/14431630150_e215ba65ca_b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.catedral-notre{
+    background-image: url(https://images.pexels.com/photos/16589479/pexels-photo-16589479/free-photo-of-ciudad-francia-punto-de-referencia-paris.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.salisbury{
+    background-image: url(https://images.pexels.com/photos/14265002/pexels-photo-14265002.jpeg?auto=compress&cs=tinysrgb&w=600);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.burgos{
+    background-image: url(https://viajes.nationalgeographic.com.es/medio/2020/11/05/ocho-siglos-de-historia_4272e68f_2000x1336.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.villa-barbaro{
+    background-image: url(https://4.bp.blogspot.com/-44tsJShQ3AQ/Wy_YK93PVKI/AAAAAAAAMP8/cmyWZgB58QAqQP19NQQwiJoL1XGlA_prgCLcBGAs/s1600/IMG_4943.JPG);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.teatro-olimpico{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Interior_of_Teatro_Olimpico_%28Vicenza%29_scena_.jpg/1200px-Interior_of_Teatro_Olimpico_%28Vicenza%29_scena_.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.villa-capra{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/86/07-Villa-Rotonda-Palladio.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.basilica-italiana{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Basilica_di_san_lorenzo_33.JPG/1024px-Basilica_di_san_lorenzo_33.JPG);
+    
+    
+}
+
+.iglesia-italiana{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Sant%27Andrea_della_Valle_%28Rome%29_-_Fa%C3%A7ade.jpg/1200px-Sant%27Andrea_della_Valle_%28Rome%29_-_Fa%C3%A7ade.jpg);
+}
+
+.palacio-italiano{
+    background-image: url(https://www.feelflorence.it/sites/www.feelflorence.it/files/2020-05/Palazzo%20Medici%20Riccardi%2002.jpg);
+}
+
+.basilica-sanpedro{
+    background-image: url(https://www.walksinsiderome.com/wp-content/uploads/2015/10/Rome_an_outdoor_set_for_many_movies_Vatican_.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.palacio-versalles{
+    background-image: url(https://www.nuevatribuna.es/asset/thumbnail,992,558,center,center/media/nuevatribuna/images/2022/09/01/2022090114535772031.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.catedral-santiago{
+    background-image: url(https://historia.nationalgeographic.com.es/medio/2013/04/16/0023040d_2000x1331.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scala{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/71/Exterior_Teatro_Alla_Scala_high_quality_01.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.capitolio{
+    background-image: url(https://viajonarios.com/wp-content/uploads/2015/11/525105_4372422239673_956457263_n.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.museo-louvre{
+    background-image: url(https://a.cdn-hotels.com/gdcs/production198/d1694/b8ff0660-b69a-11e8-a095-0242ac11000d.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.teatro-colon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/82/Fachada_del_Teatro_Col%C3%B3n_en_Buenos_Aires%2C_Argentina.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+.palacio-bruselas{
+    background-image: url(https://abruselas.com/wp-content/uploads/2017/10/palacio-justicia-bruselas.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.teatro-rio{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3f/Teatro_Municipal_-_panoramio_%284%29.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.casa-farnsworth{
+    background-image: url(https://es.wikiarquitectura.com/wp-content/uploads/2017/01/Farnsworth-House-Mies-van-der-Rohe-WikiArchitecture_004.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.villa-savoye{
+    background-image: url(https://www.arquitecturaydiseno.es/medio/2020/11/05/fachada-de-la-ville-savoye-de-le-corbusier-en-poissy_4e0cfd72_1440x960.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.casa-cascada{
+    background-image: url(https://benditarquitectura.com/wp-content/uploads/2020/05/casa_cascada_ext5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pabellon-barcelona{
+    background-image: url(https://hips.hearstapps.com/hmg-prod/images/3-548-4c1-1526487407.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.concert-hall{
+    background-image: url(https://es.wikiarquitectura.com/wp-content/uploads/2017/01/19_disney_concert_hall.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centro-pompidou{
+    background-image: url(https://parisjetaime.com/data/layout_image/5326_Centre-Pompidou-630x405-C-Amelie-Dupont-Architecte-Renzo-Piano-et-Richard-Rogers.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*ANTERIOR*/
+
+@media screen and (max-width: 768px) {
+    .obras {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+        grid-template-rows: auto; /* Establece las filas automáticamente */
+    }
+
+    .obra-epoca {
+        margin: 1rem 0; /* Ajusta el margen */
+    }
+}
+
+/*FOOTER*/
+
+.footer{
+    text-align: center;
+}

@@ -1,0 +1,307 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;/*Hacer Scroll la pagina auto como primera pagina de apple*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 3.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 4.8rem;
+}
+
+
+
+
+.centrar-texto{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2rem;
+    
+       
+}
+
+.centrar-texto h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.centrar-texto h3:hover{
+    color: var(--negro);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    color: var(--blanco);
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.autores__titulo a,
+.obras__titulo a{
+    color: var(--negro);
+    margin: 3rem;
+    padding: 2rem;
+}
+
+
+.nav-bg{
+    background-color: var(--blanco); 
+   
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;        
+   }
+}
+
+
+
+.navegacion-principal a{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primario);
+    
+}
+
+
+.banner-principal{
+    background-image: url(https://images.pexels.com/photos/16239493/pexels-photo-16239493/free-photo-of-ruinas-arco-manada-arcos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.contenido-banner-principal{
+    color: #ffffff;
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    top:0 ;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos__temas{
+    background-color: #C4AD79;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    
+    
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+
+.epoca-posmoderna{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+}
+
+.volver-atras{
+    color: var(--negro);
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 480px) {
+    .epoca,
+    .autores,
+    .obras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        gap: 2rem;
+        
+    }.pabellon-barcelona,
+    .concert-hall,
+    .centro-pompidou,
+    .ludwig,
+    .renzo,
+    .frank-gehry{
+        margin: 2rem;
+        
+    }.navegacion-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+   }
+  }
+
+
+  @media (min-width: 768px) {
+    
+    .obras__apartado,
+    .autores__apartado{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30rem;
+        column-gap: 2rem;
+    }.epoca{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 3rem;
+        column-gap: 3rem;
+        
+    }.sociedad__titulo,
+    .arquitectura__titulo {
+        text-align: start;
+    }.autores,
+    .obras{
+        padding: 10rem;
+    }
+  }
+
+
+.obras a:hover,
+.autores a:hover {
+    color: var(--negro); /* Cambia el color del texto del enlace cuando el cursor está sobre él */
+    
+  }
+
+.obras p,
+.autores p{
+    text-align: start;
+    margin: 1rem;
+}
+
+.pabellon-barcelona{
+    background-image: url(https://hips.hearstapps.com/hmg-prod/images/3-548-4c1-1526487407.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.concert-hall{
+    background-image: url(https://es.wikiarquitectura.com/wp-content/uploads/2017/01/19_disney_concert_hall.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centro-pompidou{
+    background-image: url(https://parisjetaime.com/data/layout_image/5326_Centre-Pompidou-630x405-C-Amelie-Dupont-Architecte-Renzo-Piano-et-Richard-Rogers.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.obras h2,
+.autores h2{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.ludwig{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/87/Hugo_Erfurth_-_Portrait_Ludwig_Mies_van_der_Rohe%2C_1934.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.renzo{
+    background-image: url(https://www.floornature.es/media/photos/1/13401/01_renzo-piano-et-richard-rogers_photo_by_archives-centre-pompidou_full.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.frank-gehry{
+    background-image: url(https://es.louisvuitton.com/content/dam/lv/online/high-end/wolv/art-et-culture/U_AC_LV_Frank_Gehry.html/jcr:content/assets/FG-LAUNCH_267_LVCOM_1600x2000_DII.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*footer*/
+
+.footer{
+    text-align: center;
+    margin: 2rem;
+    padding-top: 5rem;
+}

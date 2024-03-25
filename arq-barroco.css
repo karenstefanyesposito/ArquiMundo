@@ -1,0 +1,299 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;/*Hacer Scroll la pagina auto como primera pagina de apple*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+
+
+
+.centrar-texto{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2rem;
+    
+       
+}
+
+.centrar-texto h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.centrar-texto h3:hover{
+    color: var(--negro);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+a{
+    color: var(--blanco);
+    text-decoration: none;
+    align-items: center;
+    text-align: center;
+
+    
+}
+
+.autores__titulo a,
+.obras__titulo a{
+    color: var(--negro);
+    margin: 3rem;
+    padding: 2rem;
+}
+
+
+.nav-bg{
+    background-color: var(--blanco); 
+   
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;        
+   }
+}
+
+
+
+.navegacion-principal a{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primario);
+    
+}
+
+
+.banner-principal{
+    background-image: url(https://images.pexels.com/photos/16239493/pexels-photo-16239493/free-photo-of-ruinas-arco-manada-arcos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.contenido-banner-principal{
+    color: #ffffff;
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    top:0 ;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos__temas{
+    background-color: #C4AD79;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    
+    
+}
+
+.iconos{
+    display: flex;
+    justify-content: center;
+}
+
+.epoca-gotica{
+    text-align: center;
+    padding: 1rem;
+    padding-top: 5rem;
+}
+
+.volver-atras{
+    color: var(--negro);
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 480px) {
+    .epoca,
+    .autores,
+    .obras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        gap: 2rem;
+        
+    }.basilica-sanpedro,
+    .palacio,
+    .catedral-santiago,
+    .bernini-maderno,
+    .louis,
+    .fernando{
+        margin: 2rem;
+        
+    }.navegacion-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+   }
+  }
+
+
+  @media (min-width: 768px) {
+    
+    .obras__apartado,
+    .autores__apartado{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30rem;
+        column-gap: 2rem;
+    }.epoca{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 3rem;
+        column-gap: 3rem;
+        
+    }.sociedad__titulo,
+    .arquitectura__titulo {
+        text-align: start;
+    }.autores,
+    .obras{
+        padding: 10rem;
+    }
+  }
+
+
+.obras a:hover,
+.autores a:hover {
+    color: var(--negro); /* Cambia el color del texto del enlace cuando el cursor está sobre él */
+    
+  }
+
+.obras p,
+.autores p{
+    text-align: start;
+    margin: 1rem;
+}
+
+.basilica-sanpedro{
+    background-image: url(https://www.walksinsiderome.com/wp-content/uploads/2015/10/Rome_an_outdoor_set_for_many_movies_Vatican_.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+.palacio{
+    background-image: url(https://www.nuevatribuna.es/asset/thumbnail,992,558,center,center/media/nuevatribuna/images/2022/09/01/2022090114535772031.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.catedral-santiago{
+    background-image: url(https://historia.nationalgeographic.com.es/medio/2013/04/16/0023040d_2000x1331.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.obras h2,
+.autores h2{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.bernini-maderno{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cb/Gianlorenzo_Bernini_-_Self-Portrait_-_WGA01973.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.louis{
+    background-image: url(https://www.meisterdrucke.es/kunstwerke/500px/Unknown%20or%20Pierre%20Rabon%20-%20Portrait%20of%20Louis%20Le%20Vau%20%2816121670%29%20-%20%28MeisterDrucke-654322%29.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fernando{
+    background-image: url(https://4.bp.blogspot.com/-wXvgRb7T2xk/XEWV_T7RT-I/AAAAAAABv5I/sTED1F7dxDAszkwsrqi3EgTYOYBjlrzZACLcBGAs/s1600-rw/01.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*footer*/
+
+.footer{
+    text-align: center;
+    margin: 2rem;
+    padding-top: 5rem;
+}

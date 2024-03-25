@@ -1,0 +1,225 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;/*Hacer Scroll la pagina auto como primera pagina de apple*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+a{
+    text-decoration: none;
+    color: var(--negro);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 3.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+p{
+    text-align: start;
+    padding: 2rem;
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto ;
+}
+
+.nav-bg{
+    background-color: var(--blanco); 
+   
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;        
+   }
+}
+
+
+.navegacion-principal a{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primario);
+    
+}
+
+.banner-principal{
+    background-image: url(https://www.burgosnoticias.com/resources/files/2018/6/14/1528970130872San_Martin5dn.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.contenido-banner-principal{
+    color: #ffffff;
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    top:0 ;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+main{
+    
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    height: auto;
+}
+
+
+@media (max-width: 480px) {
+    .navegacion-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+   }.epoca-romanica{
+    display:flex;
+    flex-direction: column;
+   }
+  }
+
+
+@media (min-width:768px){
+  .romanica{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    margin: 1rem;
+   
+}
+
+.epoca{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    margin-top: 0rem;
+    
+    }
+}
+
+
+
+.epoca a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.epoca h2{
+    color: var(--blanco);
+    font-size:x-large;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.epoca-lombardo,
+.epoca-normando{
+    width: 50% 50%;
+    margin: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;/*tamaÃÂ±o de las imagenes*/
+    position: relative;
+    justify-content: space-around; /* Distribuye el espacio entre los elementos hijos */
+
+ }
+
+
+.sociedad-romanica .iconos,
+.arquitectura-romanica .iconos{
+    display: flex;
+    justify-content: center;
+}
+
+.sociedad-romanica .iconos svg,
+.arquitectura-romanica .iconos svg{
+    height: 8rem;
+    width: 8rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+.epoca-lombardo{
+    background-image: url(https://www.centreromanic.com/wp-content/uploads/2022/04/DSC9299-copia.jpg);
+}
+
+.epoca-normando{
+    background-image: url(https://i0.wp.com/www.glosarioarquitectonico.com/wp-content/uploads/2015/12/normando-1.jpg?ssl=1);
+}
+
+.footer{
+    text-align: center;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquimundo</title>
+    <link rel="preload" href="normalize.css" as="style">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="icon" href="./img/ArquiMundoF.png">
+    <script src="./arquimundo.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    
+
+    
+</head>
+<header class="header">
+
+
+    <div class="contenedor">
+
+        <div class="barra">
+            <a class="logo"  href="./index.html">
+                <h1 class="logo__nombre no-margin centrar-texto">Arqui<span class="logo__bold">Mundo</span></h1>
+            </a>
+
+            <nav class="navegacion">
+                <a class="navegacion__enlace" href="./epoca.html">Época</a>
+                <a class="navegacion__enlace" href="./obras.html">Obras</a>
+                <a class="navegacion__enlace" href="./autores.html">Autores</a>
+            </nav>
+
+        </div>
+     
+    </div>
+
+    <div class="header__texto">
+        <h3 class="no-margin">
+            Historia, Cultura y Arquitectura
+        </h3>
+        
+    </div>
+
+ 
+ 
+</header>
+
+<body>
+    <!--FORMULARIO INICIAR SESION-->
+
+ <!-- Agrega un boton para abrir el modal de registro -->
+ <button onclick="openRegisterModal()">Iniciar Sesión / Crear cuenta</button>
+
+ <!-- modal de registro -->
+ <div id="register-modal" class="modal">
+   <div class="modal-content">
+     <span class="close" onclick="closeRegisterModal()">&times;</span>
+     <h2>Iniciar Sesión / Crear cuenta</h2>
+     <form id="login-form">
+       <label for="login-email">Correo:</label>
+       <input type="email" id="login-email" required>
+       <label for="login-password">Contraseña:</label>
+       <input type="password" id="login-password" required>
+       <button type="button" onclick="login()">Iniciar Sesión</button>
+     </form>
+     <p>Crear Cuenta</p>
+     <form id="register-form">
+        <label for="register-nombre">Nombre:</label>
+       <input type="email" id="register-email" required>
+       <label for="register-email">Correo:</label>
+       <input type="email" id="register-email" required>
+       <label for="register-password">Contraseña:</label>
+       <input type="password" id="register-password" required>
+       <button type="button" onclick="register()">Crear cuenta</button>
+     </form>
+     <p>o</p>
+     <button onclick="googleSignIn()">Iniciar Sesión con Gmail</button>
+   </div>
+ </div>
+
+    <div class="contenedor contenedor-grid">
+
+        <main class="contenedor-principal">
+
+        
+            <article class="epoca no-margin centrar-texto">
+
+                    <div class="epoca__titulo">
+                        <a href="epoca.html"><h2>Epoca</h2>
+                        </a>
+    
+                    </div>
+                
+                    
+                    <div class="epoca__apartado">
+
+                        <a class="epoca__apartado__antigua" href="epoca-arq-antigua.html">
+                            <h4 class=" no-margin centrar-texto">Época Antigua
+                                
+                            </h4>
+                        </a>
+                                                   
+                        <a class="epoca__apartado__romanica" href="epoca-arq-romanica.html">
+                            <h4 class=" no-margin centrar-texto">Época Románica</h4>
+                        </a>
+
+                        <a class="epoca__apartado__gotica" href="epoca-arq-gotica.html">
+                            <h4 class=" no-margin centrar-texto">Época Gótica</h4>
+                        </a>
+                    
+                    </div>
+
+
+                    <div class="epoca__titulo__mostrar">
+                        <a  href="epoca.html"><h5>Mostrar todo</h5>
+                        </a>
+    
+                    </div>
+
+                
+            </article>
+
+
+            <article class="autores no-margin centrar-texto">
+
+                <div class="autores__titulo">
+                    <a href="autores.html"><h2>Autores</h2>
+                    </a>
+
+                </div>
+            
+                
+                <div class="autores__apartado">
+
+                    <a class="autores__apartado__antigua" href="autores.html">
+                        <h4 class=" no-margin centrar-texto">Autores Época Antigua
+                            
+                        </h4>
+                    </a>
+                                               
+                    <a class="autores__apartado__romanica" href="autores.html">
+                        <h4 class=" no-margin centrar-texto"> Autores Época Románica</h4>
+                    </a>
+
+                    <a class="autores__apartado__gotica" href="autores.html">
+                        <h4 class=" no-margin centrar-texto"> Autores Época Gótica</h4>
+                    </a>
+                
+                </div>
+
+
+                <div class="autores__titulo__mostar">
+                    <a href="autores.html"><h5>Mostar todo</h5>
+                    </a>
+
+                </div>
+
+            
+            </article>
+
+
+
+            <article class="obras no-margin centrar-texto">
+
+                <div class="obras__titulo">
+                    <a href="obras.html"><h2>Obras</h2>
+                    </a>
+
+                </div>
+            
+                
+                <div class="obras__apartado">
+
+                    <a class="obras__apartado__antigua" href="obras.html">
+                        <h4 class=" no-margin centrar-texto">Obras Época Antigua
+                            
+                        </h4>
+                    </a>
+                                               
+                    <a class="obras__apartado__romanica" href="obras.html">
+                        <h4 class=" no-margin centrar-texto"> Obras Época Románica</h4>
+                    </a>
+
+                    <a class="obras__apartado__gotica" href="obras.html">
+                        <h4 class=" no-margin centrar-texto"> Obras Época Gótica</h4>
+                    </a>
+                
+                </div>
+
+
+                <div class="obras__titulo__mostrar">
+                    <a class="mostrar" href="obras.html"><h5>Mostrar todo</h5>
+                    </a>
+
+                </div>
+
+            
+            </article>
+
+        
+            
+        </main>
+                
+        <aside class="pizarron-noticias">
+
+                    <section class="noticia1">
+                        <div class="textNot">
+                            <h3>El edificio más alto de Europa</h3>
+                            <h4>El edificio más alto de Europa, que se encuentra en Rusia, se inauguró en 2023. La torre de 404 metros de altura tiene 101 pisos y alberga oficinas, apartamentos y un hotel de lujo.</h4>
+                            <a class="links-noticias" href="https://www.archdaily.mx/mx/noticias-de-arquitectura">Leer más</a>
+                        </div>
+                        <div class="not1">
+                            <img src="https://images.adsttc.com/media/images/659b/a30a/9936/3f17/84c3/b9d7/newsletter/danish-landscape-award-2023-awarded-to-masu_4.jpg?1704698679" alt="Descripción de la imagen">
+                          </div>
+                    </section>
+
+
+                    <section class="noticia2">
+                        <div class="textNot">
+                            <h3>El edificio de oficinas más grande del mundo</h3>
+                            <h4>El edificio de oficinas más grande del mundo, que es más grande que el Pentágono, se inauguró en China. El edificio tiene una superficie de 1,7 millones de metros cuadrados y puede albergar a más de 100,000 empleados.</h4>
+                            <a class="links-noticias" href="https://cnnespanol.cnn.com/category/arquitectura/">Leer más</a>
+                        </div>
+                        <div class="not2">
+                            <img src="https://cnnespanol.cnn.com/wp-content/uploads/2023/07/230705124558-04-surat-diamond-bourse-largest-office-building-side-view.webp?w=1024" alt="Descripción de la imagen">
+                          </div>
+                    </section>
+
+
+                    <section class="noticia3">
+                        <div class="textNot">
+                            <h3>Los 23 proyectos más esperados de 2023</h3>
+                            <h4>ArchDaily México ha publicado una lista de los proyectos de arquitectura más esperados de 2023. La lista incluye 23 proyectos de todo el mundo, desde aeropuertos internacionales hasta galerías de arte y museos 1</h4>
+                            <a class="links-noticias" href="https://www.archdaily.mx/mx/noticias-de-arquitectura">Leer más</a>
+                        </div>
+                        <div class="not3">
+                            <img src="https://images.adsttc.com/media/images/63b5/9764/987c/950d/6c8f/50bc/newsletter/the-23-most-anticipated-projects-of-2023_2.jpg?1672845164" alt="Descripción de la imagen">
+                          </div>
+                    </section>
+
+
+                    
+
+
+        </aside> 
+
+    </div>
+   
+
+<div class="formulario-comentarios">
+         <h2 class="comentario">Comentarios o Sugerencias</h2>
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Contactanos llenando todos los campos</legend>
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input class="input-text" type="text" placeholder="Nombre">
+                </div>
+                    
+                <div class="campo">
+                <label>Telefono</label>
+                    <input class="input-text" type="tel" placeholder="Telefono"> 
+                </div>
+                    
+                <div class="campo">
+                    <label>Correo</label>
+                    <input class="input-text" type="email" placeholder="Email">
+                </div>
+                    
+                <div class="campo">
+                    <label>Mensaje</label>
+                    <textarea class="input-text"></textarea>
+                </div>
+            </div>
+
+                <div class="enviar">
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+                    
+            </fieldset>
+         </form>
+   
+</div>
+
+
+
+
+<!--FOoter-->
+  
+<footer class="footer">
+    <p>Todos los derechos reservados solo con fines educativos y prácticos. Karen Espósito 2023</p>
+</footer>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,289 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*PARA QUE 1 REM SEA IGUAL AS 10PX*/
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+
+
+
+a{
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: bold;
+}
+
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*Utilidades*/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+    
+}
+
+p{
+    font-family: var(--fuenteParrafos);
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin:0;
+}
+
+.logo{
+    color: var(--negro);
+    margin: 0;
+    
+}
+
+.logo__nombre{
+    font-weight:normal ;
+    color: var(--negro);
+    font-size: 2rem;
+}
+
+.logo__bold{
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+
+.contenedor__article{
+    background-color: var(--blanco);
+    margin: 2rem;
+    padding: 2rem;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+    box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+}
+
+.logo{
+    text-align: center;
+}
+.navegacion a{
+    color: var(--negro);
+}
+
+.navegacion a:hover{
+    color: var(--primario);
+}
+
+.texto__h3{
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: .2rem;
+}
+
+.texto__p{
+    font-weight: normal;
+    font-size: 1.7rem;
+    line-height: 1;
+    margin: .2rem;
+}
+
+.texto__h2{
+    font-weight: bold;
+    font-size: 2rem;
+    margin: .2rem;
+}
+
+.tex__titulo{
+    display: grid;
+    color: var(--blanco);
+    justify-content: center;
+    grid-column: 1 / 3;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+
+}
+.texto__h2__titulo{
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3;
+}
+
+.texto__h2__titulo__planos{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3;
+}
+
+.texto__h4__titulo{
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+
+}
+
+.texto__h4{
+    font-weight: bold;
+    font-size: 1.6rem;
+    margin: .2rem;
+}
+
+.texto__p__h4{
+    font-weight: normal;
+    font-size: 1.4rem;
+    margin: .2rem;
+}
+
+
+.articulo{
+    padding: 2rem;
+}
+
+.texto__general{
+    padding: 3rem;
+}
+
+.aside{
+    
+    margin: 1rem;
+    padding: 2rem;
+    
+}
+@media (max-width:480px){
+    .navegacion{
+        display: flex;
+        justify-content:center;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+        margin: 1rem;
+        gap: 1rem;
+    }
+}
+
+.tiempo a{
+    color: var(--negro);
+    font-weight: bold;
+}
+
+
+@media (min-width:768px){
+    .navegacion{
+        display: flex;
+        justify-content:center;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+        margin: 1rem;
+        gap: 1rem;
+    }.contenedor__principal{
+        max-width: 100rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        height: auto;
+    }.contenedor__article{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }.texto__h2__titulo{
+        grid-column: 1 / 3;
+    }.text__bloque{
+       grid-column: 2 / 3; 
+       grid-row: 2 / 6;
+       padding-left: 2rem;
+    }
+}
+
+.autores {
+    position: relative;
+    background-image: url(https://www.meisterdrucke.es/kunstwerke/500px/Unknown%20or%20Pierre%20Rabon%20-%20Portrait%20of%20Louis%20Le%20Vau%20%2816121670%29%20-%20%28MeisterDrucke-654322%29.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 50rem;
+    width: 100%;
+    text-align: center;
+    grid-column: 1 / 3;
+    
+}
+
+.autores::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+/*footer*/
+
+.footer{
+    text-align: center;
+}

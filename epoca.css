@@ -1,0 +1,323 @@
+
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*PARA QUE 1 REM SEA IGUAL AS 10PX*/
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*Globales*/
+
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+h4{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Utilidades*/
+
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+    
+}
+
+p{
+    font-family: var(--fuenteParrafos);
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+.header{
+    background-image: url(img/pexels-cottonbro-studio-9943046.jpg);
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /*    que parte de la imagen se seguira viendo al cambiar de dispositivo | center center para centrar vertical y horizontalmente*/
+}
+.header__texto{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 1rem;
+}
+
+@media (min-width:768px){
+    .header__texto{
+        margin-top: 1rem;
+    }
+}
+
+img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+.logo{
+    color: var(--blanco);
+    
+}
+
+.logo__nombre{
+    font-weight:normal ;
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+.logo__bold{
+    font-weight: 700;
+    font-size: 3rem;
+
+}
+
+.logo{
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .header__texto{
+        text-align: center;
+        color: var(--blanco);
+        margin:0;
+        font-size: 4rem;
+    }
+}
+
+
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;/*ALINEAR CONTENIDO HORIZONTALMENTE*/
+        align-items:center ;/*para alinear verticalmente*/
+        margin: 1rem;
+    } 
+}
+
+@media (min-width:768px){
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block; /*para que los elementos no esten uno junto al otro sino uno debajo de otro*/
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: var(--blanco);
+}
+
+.navegacion__enlace:hover{
+    color: var(--primario);
+}
+
+
+    
+
+@media(min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 1rem;
+        grid-auto-flow: column;
+    }
+}
+
+
+/*anteriores*/
+
+
+
+
+/*Main*/
+@media (max-width: 768px) { main
+        {
+            grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+            grid-template-rows: repeat(9,1fr);
+            margin: 3rem;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin: 3rem;
+    gap: 1rem; /* Espaciado entre las casillas */
+}
+
+@media (max-width: 768px) {
+    .apartados-epoca {
+      margin: 1rem; /* Redefine el margen en pantallas más pequeñas */
+      grid-row: auto; /* Restablece la propiedad grid-row a su valor por defecto */
+      grid-column: 1 / -1; /* Ocupa todas las columnas disponibles */
+      
+    }
+  }
+
+/*Apartados/casillas*/  
+
+.apartados-epoca {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+    box-shadow: 0px 5px 15px 0px rgba(82,82,82,0.45);
+    
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+  
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+.inicio-epoca {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem; /* Espaciado entre las casillas */
+}
+
+.apartados-epoca h2,
+.apartados-epoca p,
+.apartados-epoca a {
+  margin: 0; /* Elimina el margen por defecto */
+}
+.apartados-epoca p,
+.apartados-epoca a{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.apartados-epoca a{
+    color: var(--blanco);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+    
+    
+}
+
+/*apartados individuales*/
+.antigua,
+.romanica,
+.gotica,
+.renacimiento,
+.barroco,
+.neoclasico,
+.electicismo,
+.modernismo, 
+.posmodernismo{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    padding: 2rem;
+    position: relative;
+    color: #ffffff;
+}
+
+.antigua{
+    background-image: url(img/pexels-luisa-castillo-osorio-7422689.jpg);
+    
+}
+
+.romanica{
+    background-image: url(img/pexels-roman-odintsov-7691303.jpg);
+
+}
+
+.gotica{
+    background-image: url(img/pexels-miguel-arcanjo-saddi-18957041.jpg);
+
+}
+
+.renacimiento{
+    background-image: url(img/pexels-leica-palma-19395776.jpg);
+
+}
+
+.barroco{
+    background-image: url(img/pexels-enis-mehmeti-14997189.jpg);
+
+}
+
+.neoclasico{
+    background-image: url(img/pexels-pascal-bronsert-19321388.jpg);
+}
+
+.electicismo{
+    background-image: url(img/pexels-levent-simsek-18728993.jpg);
+}
+.modernismo{
+    background-image: url(img/la-ville-savoy-de-le-corbusier_abfb80db_600x600.jpg);
+}
+.posmodernismo{
+    background-image: url(img/post-modern-buildings-architecture-examples-my-modern-met-frank-gehry-walt-disney-music-hall-4.jpg);
+}
+
+/*footer*/
+
+.footer{
+    text-align: center;
+}

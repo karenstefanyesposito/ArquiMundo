@@ -1,0 +1,322 @@
+:root{
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #A9DFBF ;
+    --secundario: #FFF17C;
+    --terciario: #F5F5AF;
+    --otro:#FFDA45;  
+    --cafe: #C4AD79;
+    --fuente-principal: 3.8rem;
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+}   
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*PARA QUE 1 REM SEA IGUAL AS 10PX*/
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteHeading);
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+/*Globales*/
+
+
+a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: var(--negro);
+    text-align: center;
+}
+
+h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    text-align: center;
+}
+
+h3, h4{
+    font-weight: normal;
+}
+
+
+.titulo  span{
+    font-size: 2rem;
+}
+
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;        
+   }
+}
+.navegacion-principal a{
+    color: var(--negro);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover{
+    color: var(--primario);
+}
+
+
+.banner-principal{
+    background-image: url(https://www.burgosnoticias.com/resources/files/2018/6/14/1528970130872San_Martin5dn.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    
+    
+}
+
+.contenido-banner-principal{
+    color: #ffffff;
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    top:0 ;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    height: auto;
+    width: auto;
+
+}
+
+.epoca-romanica{
+  margin: 1rem;
+  
+    
+}
+
+
+.epoca{
+    display: flex;
+
+}
+
+.epoca a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.epoca h2{
+    color: var(--cafe);
+    font-size:x-large;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+
+.subtemas{
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.subtemas a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.subtemas h2{
+    color: var(--negro);
+    font-size:x-large;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.obras{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.obras{
+    
+    background-color: var(--blanco);
+    height: auto;
+    width: auto;
+    margin: 1rem;
+}
+
+@media (max-width: 480px) {
+    .epoca,
+    .autores,
+    .obras{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        gap: 2rem;
+        
+    }.navegacion-principal{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+   }.sociedad,
+   .arquitectura{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+   }main{
+    
+    padding: 0;
+    margin: 0;  
+    }
+}
+
+
+.sociedad,
+.arquitectura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+    background-color:#efefef;
+    height: auto;
+    
+    
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    flex: 1; /* Hace que ambas columnas ocupen el mismo espacio disponible */
+
+}
+
+
+.epoca-antigua h2{
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.arquitectura .iconos,
+.sociedad .iconos{
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    box-shadow: 3px 3px 5px 0px rgba(179,177,179,1);
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--cafe);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.arquitectura h3,
+.arquitectura p,
+.sociedad h3,
+.sociedad p{
+    text-align: start;
+    margin: 1rem;
+}
+
+.epoca-egipcia  a{
+    text-decoration: none;
+    color: #212121;
+    font-weight: lighter;
+    padding: 1rem;
+}
+
+
+.catedral,
+.palacio,
+.iglesia-cefalu{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+    margin: 2rem;
+}
+.obras h3,
+.autores h3,
+.obras a,
+.autores a{
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    font-size:2rem;
+    justify-content: center;
+    padding-top: 35%;
+    
+
+}
+
+.obras a:hover,
+.autores a:hover {
+    color: var(--negro); /* Cambia el color del texto del enlace cuando el cursor está sobre él */
+    
+  }
+
+.obras p,
+.autores p{
+    text-align: start;
+    margin: 1rem;
+}
+
+.catedral{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/ef/Monreale_Cathedral_exterior_BW_2012-10-09_10-23-10.jpg);
+    
+    
+}
+
+.palacio{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Zisa_%28Palermo%29_msu2017-0466.jpg);
+}
+
+.iglesia-cefalu{
+    background-image: url(https://live.staticflickr.com/65535/14431630150_e215ba65ca_b.jpg);
+}
+.obras h2,
+.autores h2{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer{
+    text-align: center;
+}
